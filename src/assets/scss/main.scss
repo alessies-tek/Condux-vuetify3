@@ -1,0 +1,213 @@
+//theme light
+$color1: #FFFFFF;//white
+$color2: #79af2f;//green
+$color2-lighten: #e2ffba;
+$color3: #64646C;//gray
+$color4: #f2f5f8;//background color
+$color5: #eae8e8;//light gray
+$color6: #000000;//light gray
+//theme dark
+$color-dark1: #1E1E1E;//black
+$color-dark2: #527e14;//green
+$color-dark2-lighten: #515f3d;
+$color-dark3: #363636;//gray
+$color-dark4: #424242;//background color
+$color-dark5: black;//light gray
+$color-dark6: #ffffff;//light gray
+//#f2f5f8
+$color-link: #0096c7;
+$footerheight : 100px;
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+  }
+
+a{
+    text-decoration: none !important;
+    color: $color-link !important;
+}
+
+.d-content
+{
+    display: contents;
+}
+
+.border-none
+{
+    border: none !important;
+    box-shadow: none !important;
+}
+  
+.footer-height
+{
+    height: $footerheight;
+}
+
+.v-main
+{
+    min-height: calc(100vh - #{$footerheight} - 1px) !important;
+    padding-left:56px !important;
+}
+
+.color-link
+{
+    color: $color-link !important;
+}
+
+.cursor-pointer
+{
+    cursor:pointer;
+}
+
+.left-profile
+{
+    .v-list-item-title
+    {
+        font-weight: bold;
+    }
+    .v-list-item-subtitle
+    {
+        text-overflow: ellipsis;
+        display: inherit !important;
+    }
+}
+.left-bar
+{
+    z-index: 1010 !important;
+}
+.form
+{
+    max-width: 500px;
+    margin: auto;
+}
+
+.v-theme--light
+{
+    &.condux.v-application .text-primary {
+        color: $color2 !important;
+        caret-color: $color2 !important;
+    }
+    &.condux.v-application .primary {
+        background-color: $color2 !important;
+        border-color: $color2 !important;
+    }
+    .color1, .v-data-footer button:not(.v-btn--disabled)
+    {
+        color: $color1 !important;
+    }
+    .color2 ,.left-link a, tbody button
+    {
+        color: $color2 !important;
+    }
+    .color6
+    {
+        color: $color6 !important;
+    }
+    .bg-color1
+    {
+        background-color: $color1 !important;
+    }
+    .bg-color2, .bg-primary, .v-data-footer button:not(.v-btn--disabled)
+    {
+        background-color: $color2 !important;
+    }
+    .bg-color2-lighten
+    {
+        background-color: $color2-lighten !important;
+    }
+    .bg-color3, .bg-secondary
+    {
+        background-color: $color3 !important;
+        color:white !important;
+    }
+    .bg-color4
+    {
+        background-color: $color4 !important;
+    }
+    .bg-color5
+    {
+        background-color: $color5 !important;
+    }
+    &.condux.bg-color4, .bg-color4
+    {
+        background-color: $color4 !important;
+    }
+    .bg-footer
+    {
+        background-color: $color1 !important;
+    }
+    .border-bottom-color5
+    {
+        border-bottom: 1px solid $color5;
+    }
+    .hover4:hover
+    {
+        background-color: $color4 !important;
+    }
+}
+
+.v-theme--dark
+{
+    &.condux.v-application .text-primary {
+        color: $color-dark2 !important;
+        caret-color: $color-dark2 !important;
+    }
+    &.condux.v-application .primary {
+        background-color: $color-dark2  !important;
+        border-color: $color-dark2  !important;
+    }
+    .color1, .v-data-footer button:not(.v-btn--disabled)
+    {
+        color: $color-dark1 !important;
+    }
+    .color2,.left-link a, tbody button
+    {
+        color: $color-dark2 !important;
+    }
+    .color6
+    {
+        color: $color-dark6 !important;
+    }
+    .bg-color1
+    {
+        background-color: $color-dark1 !important;
+    }
+    .bg-color2, .bg-primary, .v-data-footer button:not(.v-btn--disabled)
+    {
+        background-color: $color-dark2 !important;
+    }
+    .bg-color2-lighten
+    {
+        background-color: $color-dark2-lighten !important;
+    }
+    .bg-color3, .bg-secondary
+    {
+        background-color: $color-dark3 !important;
+        color:white !important;
+    }
+    .bg-color4
+    {
+        background-color: $color-dark4 !important;
+    }
+    .bg-color5
+    {
+        background-color: $color-dark5 !important;
+    }
+    &.condux.bg-color4, .bg-color4
+    {
+        background-color: $color-dark4 !important;
+    }
+    .bg-footer
+    {
+        background-color: $color-dark3 !important;
+    }
+    .border-bottom-color5
+    {
+        border-bottom: 1px solid $color-dark5;
+    }
+    .hover4:hover
+    {
+        background-color: $color-dark4 !important;
+    }
+}

@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app class="condux bg-color4">
+    <MainLayout v-if="this.$route.meta.authenticatedLayout">
+      <router-view></router-view>
+    </MainLayout>
+    <EmptyLayout v-else>
+      <router-view></router-view>
+    </EmptyLayout>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MainLayout from './layouts/MainLayout';
+import EmptyLayout from './layouts/EmptyLayout';
+//import { ref } from 'vue'
 export default {
   name: 'App',
+  data: () => ({
+    darkMode: false
+  }),
+
+  watch: {
+    darkMode(Value){
+      this.$vuetify.theme.dark = Value
+    }
+  },
   components: {
-    HelloWorld
+    MainLayout,
+    EmptyLayout
+  },
+  methods:
+  {
+
+  },
+  setup () {
+    // const theme = ref('light')
+
+    // return {
+    //   theme,
+    //   toggleTheme: () => theme.value = theme.value === 'light' ? 'dark' : 'light'
+    // }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
