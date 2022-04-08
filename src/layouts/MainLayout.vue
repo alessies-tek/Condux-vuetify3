@@ -12,7 +12,7 @@
           label="Search"
           hide-details
           prepend-inner-icon="mdi-magnify"
-          class="pr-3 mt-2"
+          class="pr-3 mt-4"
           size="15"
         ></v-text-field>
         <v-switch
@@ -20,7 +20,7 @@
           label="Dark Mode"
           hide-details
           flat
-          class="font-weight-bold"
+          class="font-weight-boldm mt-2"
         ></v-switch>
         <!-- Notification -->
         <v-btn 
@@ -67,7 +67,7 @@
               </v-list-item>
           </v-list>
         </v-menu> 
-        <v-btn icon="mdi-dots-vertical"></v-btn>
+        <v-btn icon="mdi-dots-vertical" class="mt-2"></v-btn>
       </template>
       
 
@@ -217,10 +217,21 @@ export default {
     FooterTemplate
   },
   watch: {
-    darkMode(Value){
-      this.$vuetify.theme.dark = Value
+    darkMode(newValue){
+      this.$emit('darkMode', newValue)
+      //alert(this.darkMode)
+      var a = this.$vuetify.theme
+      //console.log(a)
+      //this.$vuetify.theme.setTheme('dark')
+      //this.$vuetify.theme.dark = Value
+      //this.$vuetify.theme.themes.name = 'v-theme--dark'
+      /* eslint-disable */
+      debugger
+      console.log(a)
+      //this.$vuetify.theme.themes.dark = !this.$vuetify.theme.themes.dark;
     }
-  }
+  },
+  emits: ['darkMode']
   
 };
 </script>
